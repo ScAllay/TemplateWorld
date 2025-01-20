@@ -1,6 +1,0 @@
-{
-    "entrance": "foo.MyPlugin",
-    "name": "ScalaPluginTemplate-Mill",
-    "authors": ["harryxi"],
-    "version": "1.0.0"
-}

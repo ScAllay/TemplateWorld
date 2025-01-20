@@ -1,0 +1,13 @@
+{
+    "$schema": "https://raw.githubusercontent.com/AllayMC/Allay/refs/heads/master/docs/advanced/plugin_descriptor_json_scheme.json",
+    "entrance": "templateworld.PluginMain",
+    "name": "TemplateWorld",
+    "authors": ["harryxi"],
+    "version": "1.0.0",
+    "dependencies": [
+        {
+            "name":"AllayScalaLibrary",
+            "version":"3.6.2"
+        }
+    ]
+}
