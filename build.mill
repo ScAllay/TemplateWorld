@@ -1,10 +1,12 @@
-package build
+import mill.scalalib.publish.PomSettings
 import mill._, scalalib._
 import mill.scalalib.Assembly._
 import coursier.maven.MavenRepository
+import publish._
 
-object TemplateWorld extends ScalaModule {
+object TemplateWorld extends ScalaModule with PublishModule  {
 
+  def publishVersion = "0.1.0"
   def repositoriesTask = Task.Anon {
     super.repositoriesTask() ++ Seq(
       MavenRepository("https://repo.opencollab.dev/maven-releases/"),
@@ -14,7 +16,7 @@ object TemplateWorld extends ScalaModule {
     )
   }
 
-  def scalaVersion = "3.6.2"
+  def scalaVersion = "3.6.3"
 
   // def ivyDeps = Agg()
 
@@ -26,7 +28,21 @@ object TemplateWorld extends ScalaModule {
     ivy"org.scala-lang::toolkit:0.6.0",
   )
 
+  def scalacOptions = Seq(
+    "-experimental",
+    "-language:experimental.namedTuples",
+    )
+
   def assemblyRules = Assembly.defaultRules ++ Seq(Rule.ExcludePattern("scala/.*"))
+
+  def pomSettings = PomSettings(
+    description = "TemplateWorld",
+    organization = "com.github.scallay",
+    url = "https://github.com/ScAllay/TemplateWorld",
+    licenses = Seq(License.MIT),
+    versionControl = VersionControl.github("ScAllay", "TemplateWorld"),
+    developers = Seq(Developer("harryxi", "harryxi", "https://github.com/harry-xi"))
+  )
 
   object test extends ScalaTests {
     def ivyDeps = Agg(
