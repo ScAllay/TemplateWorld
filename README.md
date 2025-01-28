@@ -39,6 +39,9 @@ This plugin provides a number of APIs to allow other plugins to quickly create t
 
 Dependencies are distributed using jitpack, please add it to your repositories list. (Allay itself is being distributed through this platform, so you don't need to do anything extra if you've added the repositories list for allay correctly!)
 
+> [!CAUTION]
+> I'm currently having some problems with jitpack, as the package is temporarily unavailable
+
 `ivy"com.github.scallay::TemplateWorld:<version>`
 
 > [!IMPORTANT] 
