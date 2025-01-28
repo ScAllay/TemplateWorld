@@ -1,1 +1,3 @@
+jdk:
+  - openjdk21
 install: ./mill TemplateWorld.publishM2Local
