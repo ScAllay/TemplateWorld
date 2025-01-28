@@ -1,6 +1,7 @@
 # Template World
 
 > [!IMPORTANT] Unstable!
+> 
 > This plugin is under development and break changes may occur.
 
 Non-persistent world storage and world generation template functionality for allay
@@ -41,4 +42,5 @@ Dependencies are distributed using jitpack, please add it to your repositories l
 `ivy"com.github.scallay::TemplateWorld:<version>`
 
 > [!IMPORTANT] This plugin uses experimental features of scala
+> 
 > it use namedTuples for a better api shape
