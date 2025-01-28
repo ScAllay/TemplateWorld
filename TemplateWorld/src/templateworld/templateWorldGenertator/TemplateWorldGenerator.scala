@@ -1,18 +1,15 @@
 package templateworld.templateWorldGenertator
 
-import upickle.default.{ReadWriter, read}
-import org.allaymc.api.world.generator.WorldGenerator
-import org.allaymc.api.world.chunk.Chunk
+import scala.collection.mutable
 import java.util.concurrent.CompletableFuture
-import org.allaymc.api.world.generator.WorldGeneratorType
+import org.allaymc.api.world.generator.{WorldGenerator,WorldGeneratorType}
+import org.allaymc.api.world.chunk.Chunk
 import org.allaymc.api.world.Dimension
 import org.allaymc.api.server.Server
-import os.Path
 import org.allaymc.server.world.storage.AllayLevelDBWorldStorage
-import scala.collection.mutable
 import org.allaymc.server.world.chunk.AllayChunkBuilder
-import scala.concurrent.Future
-import templateworld.AllayExecutionContext.given
+import os.Path
+import upickle.default.{ReadWriter, read}
 
 trait TemplateWorldGeneratorCommon(preset: String, availableDim: (Boolean, Boolean, Boolean)):
   var dimension: Option[Dimension] = None

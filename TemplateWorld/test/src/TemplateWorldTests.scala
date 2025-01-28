@@ -4,11 +4,6 @@ import templateworld.templateWorldGenertator.TemplateConfig.LevelDB
 import templateworld.templateWorldGenertator.TemplateConfig.TemplateConfigException
 import scala.util.Failure
 
-object TemplateWorldTests extends TestSuite {
-
-  override def tests = Tests {}
-}
-
 object TemplateConfigTests extends TestSuite {
   override def tests = Tests {
     test("leveldb") {
